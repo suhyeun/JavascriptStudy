@@ -87,3 +87,6 @@ alert( !0 ); // true
 alert( !!"non-empty string" ); // true
 alert( !!null ); // false
 
+// 내장함수 Boolean을 사용할 경우 !!와 같은 결과를 도출할 수 있음
+alert( Boolean("non-empty string") ); // true
+alert( Boolean(null) ); // false
