@@ -18,5 +18,7 @@ alert(height ?? 100); // 0
 // ??sms &&나 ||와 함께 사용하지 못함
 let x = 1 && 2 ?? 3; // SyntaxError: Unexpected token '??'
 
-
+// 사용하고 싶다면 괄호를 사용해야함
+let x = (1 && 2) ?? 3; // 제대로 동작
+alert(x); // 2
 
