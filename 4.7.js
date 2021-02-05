@@ -38,3 +38,13 @@ for (let key in user) alert(key); // name과 age만 출력되고, 심볼은 출�
 
 // 심볼로 직접 접근하면 잘 작동합니다.
 alert( "직접 접근한 값: " + user[id] );
+
+// 전역 심볼
+// 전역 레지스트리에서 심볼을 읽음
+let id = Symbol.for("id"); // 심볼이 존재하지 않으면 새로운 심볼을 만듦
+
+// 동일한 이름을 이용해 심볼을 다시 읽음.(멀리 떨어진 코드에서도 가능)
+let idAgain = Symbol.for("id");
+
+// 두 심볼은 같음.
+alert( id === idAgain ); // true
