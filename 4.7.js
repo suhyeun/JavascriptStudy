@@ -48,3 +48,18 @@ let idAgain = Symbol.for("id");
 
 // 두 심볼은 같음.
 alert( id === idAgain ); // true
+
+
+// Symbol.key.For
+// 이름을 이용해 심볼을 찾음
+let sym = Symbol.for("name");
+let sym2 = Symbol.for("id");
+
+// 심볼을 이용해 이름을 얻음
+alert( Symbol.keyFor(sym) ); // name
+alert( Symbol.keyFor(sym2) ); // id
+
+
+// 시스템 심볼
+// 자바 스크립트 내부에서 실행되는 심볼
+// 시스템 심볼을 활용하면 객체를 미세조정할 수 있음
