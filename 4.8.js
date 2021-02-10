@@ -21,3 +21,11 @@ let delta = date1 - date2;
 // 크고 작음 비교하기
 let greater = user1 > user2;
 
+
+// "defualt"
+// 연산자가 기대하는 자료형이 확실하지 않을 때 hint는 default가 됨
+// 이항 덧셈 연산은 hint로 `default`를 사용합니다.
+let total = obj1 + obj2;
+
+// obj == number 연산은 hint로 `default`를 사용합니다.
+if (user == 1) { };
