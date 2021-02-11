@@ -21,7 +21,6 @@ let delta = date1 - date2;
 // 크고 작음 비교하기
 let greater = user1 > user2;
 
-
 // "defualt"
 // 연산자가 기대하는 자료형이 확실하지 않을 때 hint는 default가 됨
 // 이항 덧셈 연산은 hint로 `default`를 사용합니다.
@@ -29,3 +28,12 @@ let total = obj1 + obj2;
 
 // obj == number 연산은 hint로 `default`를 사용합니다.
 if (user == 1) { };
+
+// "boolean" hint는 없음
+
+
+// Symbol.to.Primitive
+obj[Symbol.toPrimitive] = function(hint) {
+    // 반드시 원시값을 반환해야 합니다.
+    // hint는 "string", "number", "default" 중 하나가 될 수 있습니다.
+};
