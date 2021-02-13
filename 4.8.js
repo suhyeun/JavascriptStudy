@@ -52,3 +52,13 @@ let user = {
 alert(user); // hint: string -> {name: "John"}
 alert(+user); // hint: number -> 1000
 alert(user + 500); // hint: default -> 1500
+
+// 추가 형 변환
+let obj = {
+  // 다른 메서드가 없으면 toString에서 모든 형 변환을 처리합니다.
+  toString() {
+    return "2";
+  }
+};
+
+alert(obj * 2); // 4, 객체가 문자열 "2"로 바뀌고, 곱셈 연산 과정에서 문자열 "2"는 숫자 2로 변경됩니다.
