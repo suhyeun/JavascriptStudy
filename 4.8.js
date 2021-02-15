@@ -52,6 +52,7 @@ let user = {
 alert(user); // hint: string -> {name: "John"}
 alert(+user); // hint: number -> 1000
 alert(user + 500); // hint: default -> 1500
+// 메서드를 구현해 놓으면 user는 hint에 따라 문자열로 ㅂㄴ환되기도 하고 숫자로 변환되기도 함
 
 // 추가 형 변환
 let obj = {
