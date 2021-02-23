@@ -38,3 +38,10 @@ let a = 0b11111111; // 255의 2진수
 let b = 0o377; // 255의 8진수
 
 alert( a == b ); // true, 진법은 다르지만, a와 b는 같은 수임
+
+
+// toString(base)
+let num = 255;
+
+alert( num.toString(16) );  // ff
+alert( num.toString(2) );   // 11111111
