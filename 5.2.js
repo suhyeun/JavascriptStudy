@@ -45,3 +45,21 @@ let num = 255;
 
 alert( num.toString(16) );  // ff
 alert( num.toString(2) );   // 11111111
+
+
+// 어림수 구하기
+// 1. Math.floor
+// 소수점 첫째 자리에서 내림
+
+// 2. Math.ceil
+// 소수점 첫째 자리에서 올림
+
+// 3. Math.round
+// 소수점 첫째 자리에서 반올림
+
+// 4. Math.trunc
+// 소수부를 무시
+
+// 곱하기와 나누기
+let num = 1.23456;
+alert( Math.floor(num * 100) / 100 ); // 1.23456 -> 123.456 -> 123 -> 1.23
