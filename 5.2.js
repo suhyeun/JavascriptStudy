@@ -63,3 +63,11 @@ alert( num.toString(2) );   // 11111111
 // 곱하기와 나누기
 let num = 1.23456;
 alert( Math.floor(num * 100) / 100 ); // 1.23456 -> 123.456 -> 123 -> 1.23
+
+// 소수점 n 번째 수까지의 어림수를 구한 후 이를 문자형으로 반환해주는 메서드인 toFixed(n)를 사용합니다
+let num = 12.34;
+alert( num.toFixed(1) ); // "12.3"
+
+// toFixed는 Math.round와 유사하게 가장 가까운 값으로 올림 혹은 버림
+let num = 12.36;
+alert( num.toFixed(1) ); // "12.4"
