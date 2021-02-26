@@ -71,3 +71,8 @@ alert( num.toFixed(1) ); // "12.3"
 // toFixed는 Math.round와 유사하게 가장 가까운 값으로 올림 혹은 버림
 let num = 12.36;
 alert( num.toFixed(1) ); // "12.4"
+
+// toFixed를 사용할 때 주의할 점은 이 메서드의 반환 값이 문자열이라는 것. 소수부의 길이가 인수보다 작으면 끝에 0이 추가
+let num = 12.34;
+alert( num.toFixed(5) ); // "12.34000", 소수부의 길이를 5로 만들기 위해 0이 추가
+
