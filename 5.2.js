@@ -116,3 +116,9 @@ alert( num.toFixed(1) ); // "12.3"
 // isNaN(value) – 인수를 숫자로 변환한 다음 NaN인지 테스트
 alert( isNaN(NaN) ); // true
 alert( isNaN("str") ); // true
+
+alert( NaN === NaN ); // false
+
+alert( isFinite("15") ); // true
+alert( isFinite("str") ); // false, NaN이기 때문입니다.
+alert( isFinite(Infinity) ); // false, Infinity이기 때문입니다.
