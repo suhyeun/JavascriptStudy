@@ -120,5 +120,10 @@ alert( isNaN("str") ); // true
 alert( NaN === NaN ); // false
 
 alert( isFinite("15") ); // true
-alert( isFinite("str") ); // false, NaN이기 때문입니다.
-alert( isFinite(Infinity) ); // false, Infinity이기 때문입니다.
+alert( isFinite("str") ); // false, NaN이기 때문
+alert( isFinite(Infinity) ); // false, Infinity이기 때문
+
+let num = +prompt("숫자를 입력하세요.", '');
+
+// 숫자가 아닌 값을 입력하거나 Infinity, -Infinity를 입력하면 false가 출력
+alert( isFinite(num) );
