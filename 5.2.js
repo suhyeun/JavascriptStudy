@@ -127,3 +127,7 @@ let num = +prompt("숫자를 입력하세요.", '');
 
 // 숫자가 아닌 값을 입력하거나 Infinity, -Infinity를 입력하면 false가 출력
 alert( isFinite(num) );
+
+
+// parseInt와 parseFloat
+alert( +"100px" ); // NaN
