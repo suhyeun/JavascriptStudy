@@ -130,4 +130,11 @@ alert( isFinite(num) );
 
 
 // parseInt와 parseFloat
+// parseInt는 정수, parseFloat는 부동 소수점 숫자를 반환
 alert( +"100px" ); // NaN
+
+alert( parseInt('100px') ); // 100
+alert( parseFloat('12.5em') ); // 12.5
+
+alert( parseInt('12.3') ); // 12, 정수 부분만 반환
+alert( parseFloat('12.3.4') ); // 12.3, 두 번째 점에서 숫자 읽기를 멈춤
