@@ -10,3 +10,12 @@ function sum(a, b) {
 }
 
 alert(`1 + 2 = ${sum(1, 2)}.`); // 1 + 2 = 3.
+
+
+let guestList = `손님:
+ * John
+ * Pete
+ * Mary
+`;
+
+alert(guestList); // 손님 리스트를 여러 줄에 걸쳐 작성
