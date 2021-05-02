@@ -38,3 +38,8 @@ alert( "\u{1F60D}" ); // 😍, 웃는 얼굴 기호(긴 유니코드)
 // 이스케이프 문자(escape character) or 역슬래시(backslash character)
 // 역슬래시는 문자열 내에 따옴표를 넣을 때도 사용
 alert( 'I\'m the Walrus!' ); // I'm the Walrus!
+
+
+alert( `I'm the Walrus!` ); // 따옴표 대신 백틱으로 감싸주면 따옴표를 확인 가능
+
+alert( `역슬래시: \\` ); // 역슬래시를 보여줘야 할 경우 2개를 연속으로 붙임
