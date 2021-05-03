@@ -43,3 +43,20 @@ alert( 'I\'m the Walrus!' ); // I'm the Walrus!
 alert( `I'm the Walrus!` ); // 따옴표 대신 백틱으로 감싸주면 따옴표를 확인 가능
 
 alert( `역슬래시: \\` ); // 역슬래시를 보여줘야 할 경우 2개를 연속으로 붙임
+
+// 문자열의 길이
+// length 프로퍼티엔 문자열의 길이가 저장
+alert( `My\n`.length ); // 3
+
+// 특정 글자에 접근하기
+// 문자열 내 특정 위치인 pos에 있는 글자에 접근하려면 [pos]같이 대괄호를 이용하거나 str.charAt(pos)라는 메서드를 호출
+// 위치는 0부터 시작
+let str = `Hello`;
+
+// 첫 번째 글자
+alert( str[0] ); // H
+alert( str.charAt(0) ); // H
+
+// 마지막 글자
+alert( str[str.length - 1] ); // o
+
