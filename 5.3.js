@@ -60,3 +60,16 @@ alert( str.charAt(0) ); // H
 // 마지막 글자
 alert( str[str.length - 1] ); // o
 
+// 근래에는 대괄호를 이용하는 방식을 사용  charAt은 하위 호환성을 위해 남아있는 메서드
+// 두 접근 방식의 차이는 반환할 글자가 없을 때 드러남 접근하려는 위치에 글자가 없는 경우 []는 undefined를, charAt은 빈 문자열을 반환
+let str = `Hello`;
+
+alert( str[1000] ); // undefined
+alert( str.charAt(1000) ); // '' (빈 문자열)
+
+// for..of를 사용하면 문자열을 구성하는 글자를 대상으로 반복 작업을 할 수 있음
+
+for (let char of "Hello") {
+  alert(char); // H,e,l,l,o (char는 순차적으로 H, e, l, l, o가 됩니다.)
+}
+
