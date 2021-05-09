@@ -73,3 +73,26 @@ for (let char of "Hello") {
   alert(char); // H,e,l,l,o (char는 순차적으로 H, e, l, l, o가 됩니다.)
 }
 
+
+// 문자열의 불변성
+// 문자열은 수정할 수 없음, 따라서 문자열의 중간 글자 하나를 바꾸려고 하면 에러가 발생
+
+let str = 'Hi';
+str[0] = 'h'; // Error: Cannot assign to read only property '0' of string 'Hi'
+alert( str[0] ); // 동작하지 않음
+
+// 이런 문제를 피하려면 완전히 새로운 문자열 하나를 만든 다음, 이 문자열을 str에 할당하면 됨
+let str = 'Hi';
+
+str = 'h' + str[1]; // 문자열 전체를 교체함
+
+alert( str ); // hi
+
+
+// 대소문자 변겅하기
+// 메서드 toLowerCase()와 toUpperCase()는 대문자를 소문자로, 소문자를 대문자로 변경(케이스 변경)
+alert( 'Interface'.toUpperCase() ); // INTERFACE
+alert( 'Interface'.toLowerCase() ); // interface
+
+// 글자 하나의 케이스만 변경하는 것도 가능
+alert( 'Interface'[0].toLowerCase() ); // 'i'
