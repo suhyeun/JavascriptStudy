@@ -96,3 +96,15 @@ alert( 'Interface'.toLowerCase() ); // interface
 
 // 글자 하나의 케이스만 변경하는 것도 가능
 alert( 'Interface'[0].toLowerCase() ); // 'i'
+
+
+// 부분 문자열 찾기
+// 1. str.indexOf(substr, pos) 메서드 이용
+// 문자열 str의 pos에서부터 시작해, 부분 문자열 substr이 어디에 위치하는지를 찾음. 원하는 부분 문자열을 찾으면 위치를 반환하고 그렇지 않으면 -1을 반환
+let str = 'Widget with id';
+
+alert( str.indexOf('Widget') ); // 0, str은 'Widget'으로 시작함
+alert( str.indexOf('widget') ); // -1, indexOf는 대·소문자를 따지므로 원하는 문자열을 찾지 못함
+
+alert( str.indexOf("id") ); // 1, "id"는 첫 번째 위치에서 발견됨 (Widget에서 id)
+
