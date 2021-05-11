@@ -105,6 +105,32 @@ let str = 'Widget with id';
 
 alert( str.indexOf('Widget') ); // 0, str은 'Widget'으로 시작함
 alert( str.indexOf('widget') ); // -1, indexOf는 대·소문자를 따지므로 원하는 문자열을 찾지 못함
-
 alert( str.indexOf("id") ); // 1, "id"는 첫 번째 위치에서 발견됨 (Widget에서 id)
 
+// str.indexOf(substr, pos)의 두 번째 매개변수 pos는 선택적으로 사용할 수 있는데, 이를 명시하면 검색이 해당 위치부터 시작
+let str = 'Widget with id';
+alert( str.indexOf('id', 2) ) // 12
+
+// 문자열 내 부분 문자열 전체를 대상으로 무언가를 하고 싶다면 반복문 안에 indexOf를 사용
+// 반복문이 하나씩 돌 때마다 검색 시작 위치가 갱신되면서 indexOf가 새롭게 호출
+let str = 'As sly as a fox, as strong as an ox';
+
+let target = 'as'; // as를 찾아봅시다.
+
+let pos = 0;
+while (true) {
+  let foundPos = str.indexOf(target, pos);
+  if (foundPos == -1) break;
+
+  alert( `위치: ${foundPos}` );
+  pos = foundPos + 1; // 다음 위치를 기준으로 검색을 이어갑니다.
+}
+
+// 동일한 알고리즘을 사용해 코드를 짧게 줄이면
+let str = "As sly as a fox, as strong as an ox";
+let target = "as";
+
+let pos = -1;
+while ((pos = str.indexOf(target, pos + 1)) != -1) {
+  alert( `위치: ${pos}` );
+}
