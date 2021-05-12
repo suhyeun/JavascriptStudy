@@ -134,3 +134,33 @@ let pos = -1;
 while ((pos = str.indexOf(target, pos + 1)) != -1) {
   alert( `위치: ${pos}` );
 }
+
+// if문의 조건식에 indexOf를 쓸 때 주의할 점
+let str = "Widget with id";
+
+if (str.indexOf("Widget")) {
+    alert("찾았다!"); // 의도한 대로 동작하지 않습니다.
+}
+
+// str.indexOf("Widget")은 0을 반환하는데, if문에선 0을 false로 간주하므로 alert 창이 뜨지 않음
+// 따라서 부분 문자열 여부를 검사하려면 아래와 같이 -1과 비교해야 함
+let str = "Widget with id";
+
+if (str.indexOf("Widget") != -1) {
+    alert("찾았다!"); // 의도한 대로 동작합니다.
+}
+
+// 비트 NOT 연산자를 사용한 기법
+// 비트 NOT 연산자는 피연산자를 32비트 정수로 바꾼 후(소수부는 모두 버려짐) 모든 비트를 반전
+// 따라서 n이 32비트 정수일 때 ~n은 -(n+1)이 됨
+alert( ~2 ); // -3, -(2+1)과 같음
+alert( ~1 ); // -2, -(1+1)과 같음
+alert( ~0 ); // -1, -(0+1)과 같음
+alert( ~-1 ); // 0, -(-1+1)과 같음
+
+//  ~str.indexOf("...")를 사용하면 코드의 길이를 줄일 수 있음
+let str = "Widget";
+
+if (~str.indexOf("Widget")) {
+  alert( '찾았다!' ); // 의도한 대로 동작합니다.
+}
