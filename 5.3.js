@@ -164,3 +164,36 @@ let str = "Widget";
 if (~str.indexOf("Widget")) {
   alert( '찾았다!' ); // 의도한 대로 동작합니다.
 }
+
+
+// includes, startsWith, endsWith
+// str.includes(substr, pos)는 str에 부분 문자열 substr이 있는지에 따라 true나 false를 반환
+alert( "Widget with id".includes("Widget") ); // true
+
+alert( "Hello".includes("Bye") ); // false
+
+// str.includes에도 str.indexOf처럼 두 번째 인수를 넘기면 해당 위치부터 부분 문자열을 검색
+alert( "Widget".includes("id") ); // true
+alert( "Widget".includes("id", 3) ); // false, 세 번째 위치 이후엔 "id"가 없음
+
+// 메서드 str.startsWith와 str.endsWith는 메서드 이름 그대로 문자열 str이 특정 문자열로 시작하는지(start with) 여부와 특정 문자열로 끝나는지(end with) 여부를 확인할 때 사용
+alert( "Widget".startsWith("Wid") ); // true, "Widget"은 "Wid"로 시작
+alert( "Widget".endsWith("get") ); // true, "Widget"은 "get"으로 끝
+
+
+// 부분 문자열 추출하기
+// 1. str.slice(start [, end])
+// 문자열의 start부터 end까지(end는 미포함)를 반환
+let str = "stringify";
+alert( str.slice(0, 5) ); // 'strin', 0번째부터 5번째 위치까지(5번째 위치의 글자는 포함하지 않음)
+alert( str.slice(0, 1) ); // 's', 0번째부터 1번째 위치까지(1번째 위치의 자는 포함하지 않음)
+
+// 두 번째 인수가 생략된 경우엔, 명시한 위치부터 문자열 끝까지를 반환
+let str = "stringify";
+alert( str.slice(2) ); // ringify, 2번째부터 끝까지
+
+// start와 end는 음수가 될 수도 있음. 음수를 넘기면 문자열 끝에서부터 카운팅을 시작함
+let str = "stringify";
+
+// 끝에서 4번째부터 시작해 끝에서 1번째 위치까지
+alert( str.slice(-4, -1) ); // gif
