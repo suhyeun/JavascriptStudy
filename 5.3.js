@@ -194,6 +194,22 @@ alert( str.slice(2) ); // ringify, 2번째부터 끝까지
 
 // start와 end는 음수가 될 수도 있음. 음수를 넘기면 문자열 끝에서부터 카운팅을 시작함
 let str = "stringify";
-
 // 끝에서 4번째부터 시작해 끝에서 1번째 위치까지
 alert( str.slice(-4, -1) ); // gif
+
+// 2. str.substring(start [, end])
+// start와 end 사이에 있는 문자열을 반환
+// substring은 slice와 아주 유사하지만 start가 end보다 커도 괜찮다는 데 차이있음
+let str = "stringify";
+
+// 동일한 부분 문자열을 반환합니다.
+alert( str.substring(2, 6) ); // "ring"
+alert( str.substring(6, 2) ); // "ring"
+
+// slice를 사용하면 결과가 다릅니다.
+alert( str.slice(2, 6) ); // "ring" (같음)
+alert( str.slice(6, 2) ); // "" (빈 문자열)
+// substring은 음수 인수를 허용하지 않음
+// 음수는 0으로 처리
+
+// 3. str.substr(start [, length])
