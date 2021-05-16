@@ -213,3 +213,21 @@ alert( str.slice(6, 2) ); // "" (빈 문자열)
 // 음수는 0으로 처리
 
 // 3. str.substr(start [, length])
+// start에서부터 시작해 length 개의 글자를 반환
+// substr은 끝 위치 대신에 길이를 기준으로 문자열을 추출한다는 점에서 substring과 slice와 차이가 있음
+let str = "stringify";
+alert( str.substr(2, 4) ); // ring, 두 번째부터 글자 네 개
+
+// 첫 번째 인수가 음수면 뒤에서부터 개수를 셈
+let str = "stringify";
+alert( str.substr(-4, 2) ); // gi, 끝에서 네 번째 위치부터 글자 두 개
+
+
+// 문자열 비교하기
+// 소문자는 대문자보다 항상 크다
+alert( 'a' > 'Z' ); // true
+
+// 발음 구별 기호가 붙은 문자는 알파벳 순서 기준을 따르지 않음
+alert( 'Österreich' > 'Zealand' ); // true (Österreich는 오스트리아를 독일어로 표기한 것)
+
+
