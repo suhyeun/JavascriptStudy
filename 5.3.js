@@ -231,3 +231,8 @@ alert( 'a' > 'Z' ); // true
 alert( 'Österreich' > 'Zealand' ); // true (Österreich는 오스트리아를 독일어로 표기한 것)
 
 
+// str.codePointAt(pos)
+// pos에 위치한 글자의 코드를 반환
+// 글자는 같지만 케이스는 다르므로 반환되는 코드가 다릅니다.
+alert( "z".codePointAt(0) ); // 122
+alert( "Z".codePointAt(0) ); // 90
