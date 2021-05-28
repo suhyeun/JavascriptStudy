@@ -236,3 +236,20 @@ alert( 'Österreich' > 'Zealand' ); // true (Österreich는 오스트리아를 �
 // 글자는 같지만 케이스는 다르므로 반환되는 코드가 다릅니다.
 alert( "z".codePointAt(0) ); // 122
 alert( "Z".codePointAt(0) ); // 90
+
+// String.fromCodePoint(code)
+// 숫자 형식의 code에 대응하는 글자를 만들어줌
+alert( String.fromCodePoint(90) ); // Z
+
+// \u 뒤에 특정 글자에 대응하는 16진수 코드를 붙이는 방식으로도 원하는 글자를 만들 수 있음
+// 90을 16진수로 변환하면 5a입니다.
+alert( '\u005a' ); // Z
+
+let str = '';
+
+for (let i = 65; i <= 220; i++) {
+  str += String.fromCodePoint(i);
+}
+alert( str );
+// ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+// ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜ
